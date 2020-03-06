@@ -42,7 +42,7 @@ export class InputUserDataFormComponent implements OnInit {
   	}
   	else
   	{
-  		this.http.post('http://localhost:3001',{}).subscribe((data:any) => {
+  		this.http.post('http://18.224.52.140:3001/',{}).subscribe((data:any) => {
 	    
 	      this.router.navigate(['/success']);
 	    }, error =>
