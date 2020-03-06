@@ -1,0 +1,14 @@
+<legend>Enter a Name</legend>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+	<div class="form-group" [ngClass]="{ 'has-error': invalidFirstName() }"> <!-- First Name -->
+		<label for="first_name" class="control-label">Name</label>
+		<input type="text" formControlName="first_name" class="form-control" id="first_name" name="first_name" placeholder="Martin">
+		<p *ngIf="invalidFirstName()" id="first_name_error" class="help-block">{{this.serviceErrors.first_name || 'Invalid first name.'}}</p>
+	</div>
+	
+	<div class="form-group has-error"> <!-- Register Button -->
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</div>
+
+</form>	
